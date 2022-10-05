@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Action } from 'svelte/types/runtime/action'
   import { fade } from 'svelte/transition'
-	import type { UnsplashImage } from "$lib/swrLike";
+	import type { UnsplashImage } from "$lib/types";
   import placeholder from '$lib/images/placeholder.png'
 
   export let detail: UnsplashImage
@@ -14,14 +14,17 @@
     img.src = data.src
 
     img.onload = () => {
-      node.setAttribute('src', data.src)
+      setTimeout(() =>  {
+        node.setAttribute('src', data.src)
+        node.classList.remove('animate-pulse')
+      }, 1000)
     }
   }
 </script>
 
-<div class="w-full h-48 rounded hover:shadow-xl bg-gray-400 bg-opacity-50">
+<div class="w-full h-48 rounded">
   <img
-    class="object-cover w-full h-full"
+    class="object-cover rounded w-full h-full animate-pulse"
     transition:fade
     src={placeholder}
     alt={detail.alt_description}
