@@ -18,18 +18,20 @@ const config = {
 			fallback: null,
 			precompress: false,
 		}),
-		prerender: { entries: [
-			'/collections/8240068',
-			'/collections/4474589',
-			'/collections/99144643',
-			'/collections/44204348',
-			'/collections/1298463',
-			'/collections/5Ak7qclzOBg',
-			'/collections/8788025',
-			'/collections/1dTgp8ML_DY',
-			'/collections/1991725',
-			'/collections/4315264',
-		] }
+		prerender: { 
+			entries: [
+				'/collections/8240068',
+				'/collections/4474589',
+				'/collections/99144643',
+				'/collections/44204348',
+				'/collections/1298463',
+				'/collections/5Ak7qclzOBg',
+				'/collections/8788025',
+				'/collections/1dTgp8ML_DY',
+				'/collections/1991725',
+				'/collections/4315264',
+			]
+		}
 	}
 };
 
