@@ -24,7 +24,7 @@ export type UnsplashCollection = {
   user: {
     name: string
     links: {
-      self: string
+      html: string
     }
   }
 }
