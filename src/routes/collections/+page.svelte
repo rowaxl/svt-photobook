@@ -6,8 +6,6 @@
 
 	const collections = swrLike<UnsplashCollection[]>('https://api.unsplash.com/collections')
 
-	$: console.log({ collections })
-
 	const handleOnClickCollection = (id: number) => {
 		goto(`/collections/${id}`)
 	}
